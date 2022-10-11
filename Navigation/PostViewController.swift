@@ -9,18 +9,16 @@ import UIKit
 
 class PostViewController: UIViewController {
 
-    @objc func click() {
-        let infoVC = InfoViewController()
-        present(infoVC, animated: true)
-    }
-    
-        
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemGray
         let myButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(click))
         
         navigationItem.rightBarButtonItem = myButton
-        
+    }
+    
+    @objc func click() {
+        let infoVC = InfoViewController()
+        present(infoVC, animated: true)
     }
 }

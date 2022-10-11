@@ -9,21 +9,6 @@ import UIKit
 
 class InfoViewController: UIViewController {
 
-    @objc func buttAction(){
-        let alertController = UIAlertController(title: "Внимание", message: "Все сломалось", preferredStyle: .alert)
-        let actionOne = UIAlertAction(title: "Чинить", style: .default) { UIAlertAction in
-            print("Чиним")
-        }
-        let actionTwo = UIAlertAction(title: "Паниковать", style: .default) { UIAlertAction in
-            print("Паникуем")
-        }
-
-        alertController.addAction(actionOne)
-        alertController.addAction(actionTwo)
-           
-        present(alertController, animated: true)
-    }
-    
     let butt = UIButton()
     
     override func viewDidLoad() {
@@ -40,4 +25,19 @@ class InfoViewController: UIViewController {
         butt.setTitle("Alert", for: .normal)
         butt.addTarget(self, action: #selector(buttAction), for: .touchUpInside)
     }
+    
+    @objc func buttAction(){
+        let alertController = UIAlertController(title: "Внимание", message: "Все сломалось", preferredStyle: .alert)
+        let actionOne = UIAlertAction(title: "Чинить", style: .default) { UIAlertAction in
+            print("Чиним")
+        }
+        let actionTwo = UIAlertAction(title: "Паниковать", style: .default) { UIAlertAction in
+            print("Паникуем")
+        }
+
+        alertController.addAction(actionOne)
+        alertController.addAction(actionTwo)
+        present(alertController, animated: true)
+    }
+    
 }

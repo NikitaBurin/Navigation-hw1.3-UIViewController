@@ -13,10 +13,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     let feedVC = UINavigationController(rootViewController: FeedViewController())
     let profileVC = UINavigationController(rootViewController: ProfileViewController())
-    
     let tabBarC = UITabBarController()
    
-    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
        
         guard let windowScene = (scene as? UIWindowScene) else { return }
